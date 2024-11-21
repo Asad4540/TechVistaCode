@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.textbox {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.textbox input:focus {
+    border-color: #2575fc;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #333;
+
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #6a11cb;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #2575fc;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+#remember-me{
+    margin-right: 3px;
+}
