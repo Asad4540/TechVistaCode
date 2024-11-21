@@ -8,7 +8,7 @@ https://templatemo.com/tm-516-known
 
 @import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
 
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -176,7 +176,7 @@ section {
 
 section2 {
   position: relative;
-  padding: 0px 0px 100px  0;
+  padding: 0px 0px 100px 0;
 }
 
 #team,
@@ -427,7 +427,7 @@ section2 {
   -----------------------------------------*/
 
 .feature-thumb {
-  border: 1px solid #f0f0f0;
+  border: 1px solid #869791;
   padding: 5em 3em;
 }
 
@@ -915,7 +915,7 @@ footer .social-icon {
   .about-info,
   .team-thumb,
   .footer-info {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .contact-image {
@@ -1003,6 +1003,19 @@ footer .social-icon {
   .contact-image {
     margin-top: 0;
   }
+
+  .feature-thumb {
+    padding: 1em 2em;
+  }
+
+  #courses .owl-theme .owl-nav {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    padding-bottom: 0px;
+  }
+ 
 }
 
 @media only screen and (max-width: 480px) {
@@ -1067,4 +1080,11 @@ footer .social-icon {
 .hrb:hover {
   background-color: #280636;
   color: white;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .abt-img {
+    padding-top: 30px;
+  }
 }
