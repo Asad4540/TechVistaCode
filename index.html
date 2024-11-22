@@ -67,7 +67,7 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-phone"></i> +91 9021761300</a></li>
+                         <li><a href="https://wa.me/919021761300"><i class="fa fa-phone"></i>+91 9021761300</a></li>
                     </ul>
                </div>
 
@@ -309,7 +309,7 @@
 
      <!-- FEATURE -->
      <div id="feature" class="section2" style="background-color:#F9F9F9;padding: 50px 0px;">
-          <div class="container" >
+          <div class="container">
                <div class="row">
 
                     <div class="col-md-4 col-sm-4">
@@ -387,7 +387,7 @@
                               <img src="images/Abt-us.png" class="img-responsive" style="" alt="">
                          </div>
 
-               
+
                     </div>
 
                </div>
@@ -500,7 +500,7 @@
                <div class="row">
 
                     <div class="col-md-6 col-sm-12">
-                         <form id="contact-form" action="insert.php" role="form" method="POST">
+                         <form id="contact-form">
                               <div class="section-title">
                                    <h2>Contact us <small>we love conversations. let us talk!</small></h2>
                               </div>
@@ -522,7 +522,10 @@
                               <div class="col-md-4 col-sm-12">
                                    <input type="submit" class="form-control" name="submit" value="Send Message">
                               </div>
-
+                              <div class="col-md-12">
+                                   <div id="successMessage" style="color: #F9F9F9;font-size: 20px;"></div>
+                                   <div id="errorMessage" style="color: red;"></div>
+                              </div>
                          </form>
                     </div>
 
@@ -546,7 +549,7 @@
                          <div class="footer-info">
                               <h2>Contact Info</h2>
                               <div class="copyright-text">
-                                   <p><a href="callto:+91 123456890">+91 12345 67890</a></p>
+                                   <p><a href="callto:+91 123456890">+91 9021761300</a></p>
                                    <p><a href="mailto:inquires@techvistacode.com">inquires@techvistacode.com</a>
                                    </p>
                               </div>
@@ -591,6 +594,36 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+
+
+     <script>
+          $(document).ready(function () {
+               $('#contact-form').submit(function (e) {
+                    e.preventDefault();
+                    let formdata = $(this).serialize();
+                    $.ajax({
+                         type: 'post',
+                         url: 'insert.php',
+                         data: formdata,
+                         complete: function (xhr, status) {
+                              console.log("XHR response:", xhr.responseText);
+                              var response = JSON.parse(xhr.responseText);
+                              if (response.success) {
+                                   $('#successMessage').text(response.message).show();
+
+                                   setTimeout(function () {
+                                        $('#successMessage').fadeOut('slow');
+                                   }, 15000);
+
+                                   $('#contact-form')[0].reset();
+                              } else {
+                                   console.error(response.message);
+                              }
+                         }
+                    })
+               })
+          })
+     </script>
 </body>
 
 </html>
