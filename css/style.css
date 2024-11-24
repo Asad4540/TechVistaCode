@@ -1088,3 +1088,78 @@ footer .social-icon {
     padding-top: 30px;
   }
 }
+
+
+/* Counter css  */
+
+.mu-abtus-counter-area {
+  /* padding: 50px 0; */
+  text-align: center;
+}
+
+.mu-abtus-counter-single {
+  background: #1C4FDB; /* Slightly lighter dark blue #011f4b */
+  border: 2px solid #03396c; /* Blue border */
+  border-radius: 8px;
+  padding: 20px 10px;
+  margin: 15px 0;
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mu-abtus-counter-single:hover {
+  transform: scale(1.1);
+}
+
+.mu-abtus-counter-single span {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: block;
+  color: #f9c922; /* Yellowish for icons */
+}
+
+.mu-abtus-counter-single h4 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.mu-abtus-counter-single p {
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
+}
+
+.no-border {
+  border: none;
+}
+
+/* Scoped Counter Section */
+.counter-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.counter-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.counter-section .col-lg-3, 
+.counter-section .col-md-3, 
+.counter-section .col-sm-3 {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-section .col-lg-3, 
+  .counter-section .col-md-3, 
+  .counter-section .col-sm-3 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
