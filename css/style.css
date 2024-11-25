@@ -603,18 +603,21 @@ section2 {
 .courses-price {
   float: right;
   margin-top: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .courses-price span {
-  background: #008bf1;
+  background: red;
   border-radius: 2px;
   color: #ffffff;
   display: block;
   padding: 5px 10px;
 }
 
-.courses-price.free span {
-  background: #0b7dce;
+.free{
+  background: greenyellow;
+  
 }
 
 
