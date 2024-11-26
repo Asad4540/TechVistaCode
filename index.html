@@ -882,12 +882,12 @@
           <div class="modal-content">
                <span class="close" onclick="closeModal()">&times;</span>
                <h2>Contact Us</h2>
-               <form id="contact-form">
+               <form id="contact-form-2">
                     <label for="name">Name:</label>
                     <input type="text" name="name" placeholder="Your Name" required>
 
-                    <!-- <label for="contact">Email:</label>
-                    <input type="email" placeholder="Enter Email Address" name="email" required=""> -->
+                    <label for="contact">Email:</label>
+                    <input type="email" placeholder="Enter Email Address" name="email" required="">
 
                     <label for="contact">Contact No:</label>
                     <input type="text" name="contact" placeholder="Your Mobile No" required>
@@ -962,6 +962,7 @@
 
      <script>
           $(document).ready(function () {
+               // Handle first form submission
                $('#contact-form').submit(function (e) {
                     e.preventDefault();
                     let formdata = $(this).serialize();
@@ -974,19 +975,42 @@
                               var response = JSON.parse(xhr.responseText);
                               if (response.success) {
                                    $('#successMessage').text(response.message).show();
-
                                    setTimeout(function () {
                                         $('#successMessage').fadeOut('slow');
                                    }, 15000);
-
-                                   $('#contact-form')[0].reset();
+                                   $('#contact-form-1')[0].reset();
                               } else {
                                    console.error(response.message);
                               }
                          }
                     })
-               })
-          })
+               });
+
+               // Handle second form submission
+               $('#contact-form-2').submit(function (e) {
+                    e.preventDefault();
+                    let formdata = $(this).serialize();
+                    $.ajax({
+                         type: 'post',
+                         url: 'insert.php',
+                         data: formdata,
+                         complete: function (xhr, status) {
+                              console.log("XHR response:", xhr.responseText);
+                              var response = JSON.parse(xhr.responseText);
+                              if (response.success) {
+                                   $('#successMessage').text(response.message).show();
+                                   setTimeout(function () {
+                                        $('#successMessage').fadeOut('slow');
+                                   }, 15000);
+                                   $('#contact-form-2')[0].reset();
+                              } else {
+                                   console.error(response.message);
+                              }
+                         }
+                    })
+               });
+          });
+
      </script>
 </body>
 
