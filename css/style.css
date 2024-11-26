@@ -584,6 +584,7 @@ section2 {
   position: relative;
   clear: both;
   padding: 15px 25px;
+  align-items: center;
 }
 
 .courses-author,
@@ -615,9 +616,9 @@ section2 {
   padding: 5px 10px;
 }
 
-.free{
+.free {
   background: greenyellow;
-  
+
 }
 
 
@@ -1018,7 +1019,7 @@ footer .social-icon {
   .section-title {
     padding-bottom: 0px;
   }
- 
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -1101,8 +1102,10 @@ footer .social-icon {
 }
 
 .mu-abtus-counter-single {
-  background: #1C4FDB; /* Slightly lighter dark blue #011f4b */
-  border: 2px solid #03396c; /* Blue border */
+  background: #37AFE1;
+  /* Slightly lighter dark blue #011f4b */
+  border: 2px solid #03396c;
+  /* Blue border */
   border-radius: 8px;
   padding: 20px 10px;
   margin: 15px 0;
@@ -1119,7 +1122,8 @@ footer .social-icon {
   font-size: 40px;
   margin-bottom: 10px;
   display: block;
-  color: #f9c922; /* Yellowish for icons */
+  color: #f9c922;
+  /* Yellowish for icons */
 }
 
 .mu-abtus-counter-single h4 {
@@ -1149,8 +1153,8 @@ footer .social-icon {
   justify-content: center;
 }
 
-.counter-section .col-lg-3, 
-.counter-section .col-md-3, 
+.counter-section .col-lg-3,
+.counter-section .col-md-3,
 .counter-section .col-sm-3 {
   flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
@@ -1159,10 +1163,92 @@ footer .social-icon {
 }
 
 @media screen and (max-width: 768px) {
-  .counter-section .col-lg-3, 
-  .counter-section .col-md-3, 
+  .modal-content {
+    margin: 45% auto !important;
+    padding: 20px;
+  }
+
+  .counter-section .col-lg-3,
+  .counter-section .col-md-3,
   .counter-section .col-sm-3 {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
+  
+}
+
+/* ----------------------------- */
+
+/* Styling for the contact us logo */
+.contact-us-logo {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  cursor: pointer;
+  width: 60px;
+  z-index: 20;
+}
+
+/* Styling for the modal */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal button {
+  background-color: #1C4FDB;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0941da;
 }
