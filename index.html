@@ -60,7 +60,6 @@
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <!-- <li><a href="#team" class="smoothScroll">Our Teachers</a></li> -->
                          <li><a href="#courses" class="smoothScroll">Courses</a></li>
                          <li><a href="#about" class="smoothScroll">About</a></li>
                          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
@@ -150,7 +149,11 @@
                               required></textarea>
                     </div>
                     <div class="">
-                         <input type="submit" class="btn btn-primary" value="Send Message">
+                         <input type="submit" class="btn btn-primary">
+                    </div>
+                    <div><br>
+                         <div id="successMessage3" style="color: #000;font-size: 20px;"></div>
+                         <div id="errorMessage3" style="color: red;"></div>
                     </div>
                </form>
           </div>
@@ -196,10 +199,10 @@
                                                   </div>
 
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹45,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹45,000</span></a>
                                                        <del style="color: #fff;"><span>₹60,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -230,10 +233,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹45,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹45,000</span></a>
                                                        <del style="color: #fff;"><span>₹60,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -263,10 +266,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹55,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹55,000</span></a>
                                                        <del style="color: #fff;"><span>₹90,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -297,9 +300,9 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹55,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹55,000</span></a>
                                                        <del style="color: #fff;"><span>₹90,000</span></del </div>
-
                                                   </div>
                                              </div>
                                         </div>
@@ -332,10 +335,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹29,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹29,000</span></a>
                                                        <del style="color: #fff;"><span>₹45,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -365,10 +368,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹29,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹29,000</span></a>
                                                        <del style="color: #fff;"><span>₹45,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -400,10 +403,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹29,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹29,000</span></a>
                                                        <del style="color: #fff;"><span>₹45,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -434,10 +437,10 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹35,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹35,000</span></a>
                                                        <del style="color: #fff;"><span>₹50,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
@@ -471,16 +474,14 @@
                                                        <h4>Fees</h4>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <span style="background-color: #04AA6D;">₹45,000</span>
+                                                       <a href="#contact"><span
+                                                                 style="background-color: #04AA6D;">₹45,000</span></a>
                                                        <del style="color: #fff;"><span>₹60,000</span></del>
                                                   </div>
-
                                              </div>
                                         </div>
                                    </div>
                               </div>
-
-
                          </div>
                     </div>
                </div>
@@ -921,21 +922,26 @@
      <div id="contactModal" class="modal">
           <div class="modal-content">
                <span class="close" onclick="closeModal()">&times;</span>
-               <h2>Contact Us</h2>
+               <!-- <h2>Contact Us</h2> -->
+               <p
+                    style="text-align: center;color: #000;font-size: 24px;font-weight: 700;line-height: 32px;margin: 0px !important;">
+                    Your Path to Success<br>Starts Here
+               <p>
+               <h5 style="text-align: center;">Book Your Free Session Now!</h5>
                <form id="contact-form-2">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" placeholder="Your Name" required>
+                    <!-- <label for="name">Name:</label> -->
+                    <input type="text" name="name" placeholder="Enter Full Name" required>
 
-                    <label for="contact">Email:</label>
+                    <!-- <label for="contact">Email:</label> -->
                     <input type="email" placeholder="Enter Email Address" name="email" required="">
 
-                    <label for="contact">Contact No:</label>
-                    <input type="text" name="contact" placeholder="Your Mobile No" required>
+                    <!-- <label for="contact">Contact No:</label> -->
+                    <input type="text" name="contact" placeholder="Enter Contact No" required>
 
-                    <label for="message">Message:</label>
+                    <!-- <label for="message">Message:</label> -->
                     <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
 
-                    <button type="submit">Submit</button>
+                    <center><button type="submit">Send Message</button></center>
                     <div><br>
                          <div id="successMessages" style="color: #000;font-size: 20px;"></div>
                          <div id="errorMessages" style="color: red;"></div>
@@ -1047,6 +1053,30 @@
                                         $('#successMessages').fadeOut('slow');
                                    }, 15000);
                                    $('#contact-form-2')[0].reset();
+                              } else {
+                                   console.error(response.message);
+                              }
+                         }
+                    })
+               });
+
+               // Handle third form submission
+               $('#contact-form-3').submit(function (e) {
+                    e.preventDefault();
+                    let formdata = $(this).serialize();
+                    $.ajax({
+                         type: 'post',
+                         url: 'insert.php',
+                         data: formdata,
+                         complete: function (xhr, status) {
+                              console.log("XHR response:", xhr.responseText);
+                              var response = JSON.parse(xhr.responseText);
+                              if (response.success) {
+                                   $('#successMessage3').text(response.message).show();
+                                   setTimeout(function () {
+                                        $('#successMessage3').fadeOut('slow');
+                                   }, 15000);
+                                   $('#contact-form-3')[0].reset();
                               } else {
                                    console.error(response.message);
                               }
