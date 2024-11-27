@@ -1259,6 +1259,11 @@ footer .social-icon {
 }
 
 /* Show the form only on devices wider than 1200px */
+
+.contact-form-container {
+  display: none;
+}
+
 @media (min-width: 1000px) {
   .contact-form-container {
     display: block;
