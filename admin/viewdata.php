@@ -6,6 +6,14 @@ $username = "root";
 $password = "";
 $dbname = "techvistacode"; // Change to your database name
 
+session_start();
+
+// Check if the admin is logged in, if not redirect to login page
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: login.php");
+    exit;
+}
+
 // Set timezone to Indian Standard Time (IST)
 date_default_timezone_set('Asia/Kolkata');
 
@@ -85,7 +93,7 @@ $result = $conn->query($sql);
         }
         .search-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             margin-bottom: 20px;
         }
         .search-container input[type="search"] {
@@ -108,7 +116,7 @@ $result = $conn->query($sql);
                 align-items: flex-start;
             }
             .search-container input[type="search"] {
-                margin-bottom: 10px;
+                /* margin-bottom: 10px; */
                 width: 100%;
             }
             .table {
@@ -123,14 +131,19 @@ $result = $conn->query($sql);
 
 <body>
     <div class="container">
-        <h2>TechVistaCode - Contact Form Submissions</h2>
+        <div style="display:flex;justify-content: flex-end;"><a href='logout.php' class="btn btn-secondary">Logout</a></div><br>
+        <center><div style="width:200px"><img src="../images/tvc-logo.png" style="width:200px" alt=""></div></center>
+        <h2>Contact Form Submissions</h2>
 
         <!-- Search Form -->
+         
         <form method="GET" action="" class="search-container">
+            <div style="display:flex;align-items:center;justify-content:center;gap:20px;width:100%">
             <input type="search" name="search" class="form-control" placeholder="Search by name, email, or contact" value="<?php echo htmlspecialchars(
                 $search
             ); ?>">
             <button type="submit" class="btn btn-primary">Search</button>
+            </div>
         </form>
 
         <!-- Table for form submissions -->
