@@ -361,6 +361,7 @@ section2 {
 
 #home {
   padding: 0;
+  position: relative;
 }
 
 #home h1 {
@@ -1091,6 +1092,10 @@ footer .social-icon {
   .abt-img {
     padding-top: 30px;
   }
+
+  .contact-us-logo {
+    display: none;
+  }
 }
 
 
@@ -1175,7 +1180,7 @@ footer .social-icon {
     max-width: 100%;
   }
 
-  
+
 }
 
 /* ----------------------------- */
@@ -1251,4 +1256,55 @@ footer .social-icon {
 
 .modal button:hover {
   background-color: #0941da;
+}
+
+/* Show the form only on devices wider than 1200px */
+@media (min-width: 1000px) {
+  .contact-form-container {
+    display: block;
+    position: absolute;
+    top: 110px;
+    /* Adjust according to your need */
+    right: 40px;
+    /* Adjust according to your need */
+    z-index: 10;
+    /* Higher z-index to ensure visibility over carousel */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional for shadow effect */
+    width: 300px;
+    /* Adjust width as needed */
+  }
+
+  .contact-form-container h2 {
+    margin-bottom: 15px;
+    color: #0044cc;
+    /* Adjust color for heading */
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .contact-form-container .form-control {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .contact-form-container .btn-primary {
+    width: 100%;
+    background-color: #0044cc;
+    /* Button color */
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+  }
+}
+
+#contact-form-3{
+  padding:0 15px;
+  border: 0;
 }
