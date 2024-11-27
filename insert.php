@@ -55,7 +55,7 @@ if ($conn->connect_error) {
     $response=array();
     if ($conn->query($stmt)===TRUE){
         $response['success']=true;
-        $response['message']="Form submitted successfully";
+        $response['message']="We’ll Connect with You Shortly...";
     } else {
         $response['success']=false;
         $response['message']="Error: " .$stmt . "<br>" .$conn->error;
